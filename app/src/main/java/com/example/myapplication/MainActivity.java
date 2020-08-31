@@ -72,8 +72,11 @@ public class MainActivity extends AppCompatActivity
                 num2 = (EditText) findViewById(R.id.No2);
                 final int n1 = Integer.parseInt(num1.getText().toString());
                 final int n2 = Integer.parseInt(num2.getText().toString());
-                 int answer = n1 / n2;
-                Ans.setText("Division: "+ String.valueOf(answer));
+                if(n2 != 0)
+                { double answer = n1 / n2;
+                Ans.setText("Division: "+ String.valueOf(answer));}
+                else
+                    Ans.setText("Can't divide by zero");
             }
         });
     }
